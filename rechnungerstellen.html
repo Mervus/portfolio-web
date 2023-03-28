@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.css" rel="stylesheet" />
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            clifford: '#da373d',
+                            default: '#c61530',
+                        },
+                        aspectRatio: {
+                            '5/7': '5 / 7',
+                         },
+                    }
+                }
+            }
+        </script>
+        <style>
+        body{
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font: 12pt "Tahoma";
+        }
+
+        .paper-size {
+            width: 210mm;
+            min-height: 297mm;
+            padding: 20mm;
+            margin: 10mm auto;
+            border: 1px #D3D3D3 solid;
+            border-radius: 5px;
+            background: white;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .resize-none {
+            resize: none;
+        }
+
+        .w-page {
+            width: 210mm;
+            padding-left: 20mm;
+            padding-right: 20mm;
+            padding-bottom: 5mm;
+            left: 0; 
+            right: 0; 
+            margin-left: auto; 
+            margin-right: auto; 
+        }
+        </style>
+        <link href="main.css" rel="stylesheet">
+    </head>
+    <body class="bg-gray-100">
+        <div class="flex justify-center mt-5">
+            <button onclick="printDiv()" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Print</button>
+        </div>
+
+        <div class="bg-white relative paper-size h-full" id="rechnung">
+            <div class="flex justify-end">
+                <h1 class="mt-0 text-2xl text-black">Omtec Vertriebs GmbH</h2>
+            </div>
+            <div id="page-head">
+                <p class="underline decoration-gray-500 text-xs text-black">OMTEC Vertriebs GmbH - Langestraße 2 - 55555 Langendamm</h2>
+                    <div class="flex justify-between">
+                        <div class="mt-1">
+                            <p class="text-1xl text-black">Muster GmbH</p>
+                            <p class="text-1xl text-black">Herrn</p>
+                            <p class="text-1xl text-black">26316 Varel</p>
+                            <p class="text-1xl text-black">Deutschland</p>
+
+                        </div>
+                        <div class="mt-1 grid grid-cols-2 justify-items-end">
+                            <p class="text-1xl text-gray-500">Rechnungsdatum: </p> 
+                            <span class="text-black">28.03.2023</span>
+                            <p class="text-1xl text-gray-500">Leistungsdatum: </p> 
+                            <span class="text-black">29.03.2023</span>
+                            <p class="text-1xl text-gray-500">Kunden-NR:</p> 
+                            <span class="text-black">1012</span>
+                            <p class="text-1xl text-gray-500">Fälligkeitsdatum: </p> 
+                            <span class="text-black">5.04.2023</span>
+                        </div>
+                    </div>
+            </div>
+            <div id="page-body" class="mt-20 ">
+                <h2 class="text-2xl text-gray-500">Rechnung Nr: 
+                    1029
+                </h2>
+                <textarea rows="4" class="block mb-4 overflow-hidden resize-none w-full text-sm text-gray-900 border-0 h-full">Sehr geehrte Damen und Herren, 
+
+vielen Dank für Ihren Auftrag und das damit verbundene Vertrauen!
+Hiermit stellen wir Ihnen folgende Leistungen in Rechnung:
+                </textarea>
+                <div id="page-table">
+                    <table class="w-full table-auto border-b text-sm text-left text-gray-600 ">
+                        <thead class="bg-gray-200 ml-2">
+                            <tr>
+                                <th scope="col" class="">
+                                    Pos
+                                </th>
+                                <th scope="col" class="">
+                                    Beschreibung
+                                </th>
+                                <th scope="col" class="">
+                                    Menge
+                                </th>
+                                <th scope="col" class="">
+                                    MwSt
+                                </th>
+                                <th scope="col" class="">
+                                    Einzelpreis
+                                </th>
+                                <th scope="col" class="text-end">
+                                    Gesamtpreis
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody class="">
+                            <tr class="border-b">
+                                <td>1</td>
+                                <td>Solar Panel 140W</td>
+                                <td>15</td>
+                                <td>19 %</td>
+                                <td class="justify-end">215 €</td>
+                                <td class="text-end">3,225 €</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr class="font-semibold text-gray-900 dark:text-white">
+                                <td class=""></td>
+                                <td class=""></td>
+                                <td class=""></td>
+                                <td class=""></td>
+                                <th scope="row" class="py-3 text-base">Rechnungsbetrag:</th>
+                                <td class="py-3 text-end">3,225€</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+            
+            <div class="mt-10">
+
+                <textarea rows="5" class="overflow-hidden block mt-10 resize-none w-full text-sm text-gray-900 border-0 h-full">Bitte überweisen Sie den Rechnungsbetrag unter Angabe der Rechnungsnummer auf das unten angegebene Konto.
+Der Rechnungsbetrag ist sofort fällig.
+
+Mit freundlichen Grüßen
+                </textarea>
+            </div>
+                 
+        
+            <div class="w-page flex items-center justify-between absolute bottom-0 ">
+                <br class="w-full h-full border-t border-1">
+                <ul class="text-gray-500 text-xs">
+                    <li>Omtec Vertriebs GmbH</li>
+                    <li>Inh: Olaf Mergili</li>
+                    <li>Zum Jadebusen 73</li>
+                </ul>
+                <ul class="text-gray-500 text-xs">
+                    <li>Tel: 0445196113200</li>
+                    <li>E-Mail: om@omtec.de</li>
+                    <li>Web: www.omtec.de</li>
+                </ul>
+                <ul class="text-gray-500 text-xs">
+                    <li>Banksoundso</li>
+                    <li>BLZ: awdaw</li>
+                    <li>Iban: 0040 2000202 402</li>
+                </ul>
+                <ul class="text-gray-500 text-xs">
+                    <li>Steuer-Nr: 12334556</li>
+                    <li>Finanzamt Oldenburg</li>
+                    <li></li>
+                </ul>
+            
+            </div>
+
+        </div>
+
+        <script>
+           function printDiv(){
+                    var printContents = document.getElementById("rechnung").innerHTML;
+                    var originalContents = document.body.innerHTML;
+
+                    document.body.innerHTML = printContents;
+                    window.print();
+                    document.body.innerHTML = originalContents;
+		        }
+
+            function PrintElem() {
+                let elem = document.getElementById("rechnung").innerHTML;
+                let head = document.querySelector("head").innerHTML;
+
+                var win = window.open();
+                self.focus();
+                win.document.open();
+                win.document.write('<'+'html'+'>');
+                win.document.writeln("<head>" + head + "</head>")
+                win.document.write('<body>' + elem)
+                win.document.write('</body></html>');
+
+                win.document.close(); // necessary for IE >= 10
+                win.focus(); // necessary for IE >= 10*/
+
+                win.print();
+                win.close();
+
+                
+        
+            }
+
+           
+           
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.js"></script>
+    </body>
+
+</html>
