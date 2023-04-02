@@ -5,6 +5,9 @@
     <title>Title</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital@0;1&family=Josefin+Sans&family=Nabla&family=Roboto+Flex&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
@@ -18,435 +21,96 @@
         }
     </script>
     <link href="main.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #a86904;
+            color: black;
+        }
+
+        .glass {
+            /* From https://css.glass */
+            background: rgba(255, 255, 255, 0.75);
+            border-radius: 16px;
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+        }
+
+        .glass-dark {
+            /* From https://css.glass */
+        background: rgba(0, 0, 0, 0.4);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        }
+
+        .font-1 {
+            font-family: 'Courier Prime', monospace;
+        }
+
+        .font-2 {
+            font-family: 'Josefin Sans', sans-serif;
+        }
+
+        .font-3{
+            font-family: 'Nabla', cursive;
+        }
+
+        .font-4 {
+            font-family: 'Roboto Flex', sans-serif;
+        }
+
+        .img{
+   width:100px;
+   height:100px;
+
+/*Scale down will take the necessary specified space that is 100px x 100px without stretching the image*/
+    object-fit:scale-down;
+
+}
+        ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: red;
+  opacity: 1; /* Firefox */
+}
+       
+    </style>
 </head>
-<body class="bg-gray-100">
-<nav class="fixed top-0 z-50 w-full bg-white border-b border-gray-200">
-    <div class="px-3 py-3 lg:px-5 lg:pl-3">
-        <div class="flex items-center justify-between">
-            <div class="flex items-center justify-start">
-                <button data-drawer-target="logo-sidebar" data-drawer-toggle="logo-sidebar" aria-controls="logo-sidebar" type="button" class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
-                    <span class="sr-only">Open sidebar</span>
-                    <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                        <path clip-rule="evenodd" fill-rule="evenodd" d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"></path>
-                    </svg>
-                </button>
-                <a href="app.toolboxx.biz" class="flex ml-2 md:mr-24">
-                    <img src="https://app.toolboxx.biz/assets/images/toolboxx-dunkel.svg" class="h-8 mr-3" style="height:35px;" alt="">
-                </a>
+<body class="bg-gradient-to-tr from-[#FAAC2F] to-[#F606]">
+    <div class="flex justify-center w-full h-screen">
+        <div class="mt-auto mb-auto h-20 glass-dark">
+            <div class="p-2 mb-3">
+                 <h1 class="text-3xl text-white text-center font-3">
+             Marvin Mergili
+            </h1>
+            <p class="text-gray-200">I know how to do things.</p>
             </div>
-            <div class="flex basis-1/3 items-center">
-                <label for="simple-search" class="sr-only">Search</label>
-                <div class="relative w-full">
-                    <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                        <svg aria-hidden="true" class="w-5 h-5 text-gray-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path></svg>
-                    </div>
-                    <input type="text" id="simple-search" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5" placeholder="Search" required>
-                </div>
-                <button type="submit" class="p-2.5 ml-2 text-sm font-medium text-white bg-red-700 rounded-lg border border-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
-                    <span class="sr-only">Search</span>
-                </button>
+            <div class="flex justify-center mt-0.5 p-0 space-x-2">
+               <a class="" href="https://github.com/Mervus">
+                    <img class="m-0 w-10" src="./icons/github-mark-white.png"></img>
+                </a> 
             </div>
-            <div class="flex items-center">
-                <div class="flex items-center ml-3">
-                    <div class="mx-4 relative">
-                        <svg width="25" height="25" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M19.0001 9.7041V9C19.0001 5.13401 15.8661 2 12.0001 2C8.13407 2 5.00006 5.13401 5.00006 9V9.7041C5.00006 10.5491 4.74995 11.3752 4.28123 12.0783L3.13263 13.8012C2.08349 15.3749 2.88442 17.5139 4.70913 18.0116C9.48258 19.3134 14.5175 19.3134 19.291 18.0116C21.1157 17.5139 21.9166 15.3749 20.8675 13.8012L19.7189 12.0783C19.2502 11.3752 19.0001 10.5491 19.0001 9.7041Z" stroke="currentColor" stroke-width="1.5"></path>
-                            <path d="M7.5 19C8.15503 20.7478 9.92246 22 12 22C14.0775 22 15.845 20.7478 16.5 19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
-                            <path d="M12 6V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
-                        </svg>
-                        <span class="sr-only">Notifications</span>
-                        <div class="absolute inline-flex items-center justify-center w-6 h-6 text-xs font-bold text-white bg-red-500 border-2 border-white rounded-full -top-2 -right-2 ">8</div>
-                    </div>
-                    <div>
-                        <button type="button" class="flex text-sm bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300" aria-expanded="false" data-dropdown-toggle="dropdown-user">
-                            <span class="sr-only">Open user menu</span>
-                            <img class="w-8 h-8 rounded-full" src="https://flowbite.com/docs/images/people/profile-picture-2.jpg" alt="user photo">
-                        </button>
-                    </div>
-                    <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded shadow " id="dropdown-user">
-                        <div class="px-4 py-3" role="none">
-                            <p class="text-sm text-gray-900 " role="none">
-                                Marvin Mergili
-                            </p>
-                            <p class="text-sm font-medium text-gray-900 truncate " role="none">
-                                iolemcr2@gmail.com
-                            </p>
-                        </div>
-                        <ul class="py-1" role="none">
-                            <li>
-                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Settings</a>
-                            </li>
-                            <li>
-                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Sign out</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+           
+        </div>
+    </div>
+    
+    <div class="flex flex-col justify-center w-full text-center">
+        <h2 class="text-2xl text-white font-1">I've worked with</h2>
+        <div class=" mb-10 flex justify-center">
+            <div class="glass-dark flex flex-row p-4 space-x-4">
+                <a href="https://laravel.com/" class="items-center">
+                    <img class="w-24" src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg">
+                </a>
+                <a href="https://react.dev/">
+                    <img class="w-24" src="https://cdn.worldvectorlogo.com/logos/laravel-2.svg" alt="" srcset="">
+                </a>
+                <a href="https://jquery.com/"><img src="https://vectorlogo.zone/logos/jquery/jquery-vertical.svg" alt=""></a>
             </div>
+           
         </div>
     </div>
-</nav>
-<aside id="logo-sidebar" class="fixed shadow top-0 left-0 z-40 w-64 h-screen pt-20 transition-transform -translate-x-full border-r border-gray-200 sm:translate-x-0" aria-label="Sidebar">
-    <div class="h-full px-3 pb-4 overflow-y-auto">
-        <ul class="space-y-2 font-medium">
-            <li>
-                <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg">
-                    <svg class="w-6 h-6 text-gray-500 transition duration-75" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path></svg>
-                    <span class="ml-3">Dashboard</span>
-                </a>
-            </li>
-            <li>
-                <button type="button" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-200" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example" aria-expanded="true">
-                    <svg aria-hidden="true" class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 group-hover:text-gray-900" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 2a4 4 0 00-4 4v1H5a1 1 0 00-.994.89l-1 9A1 1 0 004 18h12a1 1 0 00.994-1.11l-1-9A1 1 0 0015 7h-1V6a4 4 0 00-4-4zm2 5V6a2 2 0 10-4 0v1h4zm-6 3a1 1 0 112 0 1 1 0 01-2 0zm7-1a1 1 0 100 2 1 1 0 000-2z" clip-rule="evenodd"></path></svg>
-                    <span class="flex-1 ml-3 text-left whitespace-nowrap" sidebar-toggle-item>Stammdaten</span>
-                    <svg sidebar-toggle-item class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                </button>
-                <ul id="dropdown-example" class="py-2 space-y-2">
-                    <li>
-                        <a href="#" class="text-red-700 flex items-center w-full p-2  transition duration-75 rounded-lg pl-11 group hover:bg-gray-200 ">Kontakte</a>
-                    </li>
-                    <li>
-                        <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-200 ">Rechnungen</a>
-                    </li>
-                    <li>
-                        <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-200 ">Aufträge</a>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg">
-                    <svg aria-hidden="true" class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M8.707 7.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l2-2a1 1 0 00-1.414-1.414L11 7.586V3a1 1 0 10-2 0v4.586l-.293-.293z"></path><path d="M3 5a2 2 0 012-2h1a1 1 0 010 2H5v7h2l1 2h4l1-2h2V5h-1a1 1 0 110-2h1a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V5z"></path></svg>
-                    <span class="flex-1 ml-3 whitespace-nowrap">Inbox</span>
-                    <span class="inline-flex items-center justify-center w-3 h-3 p-3 ml-3 text-sm font-medium text-blue-800 bg-blue-100 rounded-full">3</span>
-                </a>
-            </li>
-            <li>
-                <button type="button" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-200" aria-controls="dropdown-api" data-collapse-toggle="dropdown-api" aria-expanded="false">
-                    <svg aria-hidden="true" class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 group-hover:text-gray-900" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 2a4 4 0 00-4 4v1H5a1 1 0 00-.994.89l-1 9A1 1 0 004 18h12a1 1 0 00.994-1.11l-1-9A1 1 0 0015 7h-1V6a4 4 0 00-4-4zm2 5V6a2 2 0 10-4 0v1h4zm-6 3a1 1 0 112 0 1 1 0 01-2 0zm7-1a1 1 0 100 2 1 1 0 000-2z" clip-rule="evenodd"></path></svg>
-                    <span class="flex-1 ml-3 text-left whitespace-nowrap" sidebar-toggle-item>Schnittstellen</span>
-                    <svg sidebar-toggle-item class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                </button>
-                <ul id="dropdown-api" class="hidden py-2 space-y-2">
-                    <li>
-                        <a href="#" class="flex items-center w-full p-2  transition duration-75 rounded-lg pl-11 group hover:bg-gray-200 ">
-                           <img class="" src="images.png"> Google-Ads
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-200">Ebay</a>
-                    </li>
-                    <li>
-                        <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-200">Shopware</a>
-                    </li>
-                </ul>
-            </li>
-
-        </ul>
-        <ul class="pt-4 mt-4 space-y-2 font-medium border-t border-gray-200">
-            <li>
-                <a href="#" class="flex items-center p-2 text-gray-900 transition duration-75 rounded-lg hover:bg-gray-100">
-                    <svg aria-hidden="true" class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M7 3a1 1 0 000 2h6a1 1 0 100-2H7zM4 7a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM2 11a2 2 0 012-2h12a2 2 0 012 2v4a2 2 0 01-2 2H4a2 2 0 01-2-2v-4z"></path></svg>
-                    <span class="ml-3">Custom Feature</span>
-                </a>
-            </li>
-            <li>
-                <a href="#" class="flex items-center p-2 text-gray-900 transition duration-75 rounded-lg hover:bg-gray-100">
-                    <svg aria-hidden="true" class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-2 0c0 .993-.241 1.929-.668 2.754l-1.524-1.525a3.997 3.997 0 00.078-2.183l1.562-1.562C15.802 8.249 16 9.1 16 10zm-5.165 3.913l1.58 1.58A5.98 5.98 0 0110 16a5.976 5.976 0 01-2.516-.552l1.562-1.562a4.006 4.006 0 001.789.027zm-4.677-2.796a4.002 4.002 0 01-.041-2.08l-.08.08-1.53-1.533A5.98 5.98 0 004 10c0 .954.223 1.856.619 2.657l1.54-1.54zm1.088-6.45A5.974 5.974 0 0110 4c.954 0 1.856.223 2.657.619l-1.54 1.54a4.002 4.002 0 00-2.346.033L7.246 4.668zM12 10a2 2 0 11-4 0 2 2 0 014 0z" clip-rule="evenodd"></path></svg>
-                    <span class="ml-3">Help</span>
-                </a>
-            </li>
-        </ul>
-    </div>
-</aside>
-
-<div class="p-4 sm:ml-64 mt-14">
-    <nav class="flex mb-4" aria-label="Breadcrumb">
-        <ol class="inline-flex items-center space-x-1 md:space-x-3">
-            <li class="inline-flex items-center">
-                <a href="#" class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-gray-900">
-                    <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path></svg>
-                    ToolBoxx
-                </a>
-            </li>
-            <li>
-                <div class="flex items-center">
-                    <svg class="w-6 h-6 text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
-                    <a href="#" class="ml-1 text-sm font-medium text-gray-700 hover:text-gray-900 md:ml-2">Kontakte</a>
-                </div>
-            </li>
-        </ol>
-    </nav>
-    <div class="flex justify-between mb-2">
-        <div>
-            <h2 class="text-2xl font-semibold text-red-700">Kontakte</h2>
-        </div>
-        <div>
-
-        </div>
-    </div>
-    <div class="p-0 bg-white rounded-lg">
-        <div class="relative overflow-x-auto">
-            <table class="w-full text-sm text-left text-gray-500 table-auto ">
-                <thead class="rounded-lg text-xs text-gray-700 border-b uppercase ">
-                    <tr>
-                        <th scope="col" class="p-4">
-                            <div class="flex items-center">
-                                <input id="checkbox-all-search" type="checkbox" class="w-4 h-4 text-blue-600 bg-white-100 border-gray-300 rounded focus:ring-blue-500">
-                                <label for="checkbox-all-search" class="sr-only">checkbox</label>
-                            </div>
-                        </th>
-                        <th scope="col" class="px-6 py-3">
-                            Kontakt-NR
-                        </th>
-                        <th scope="col" class="px-6 py-3">
-                            Firma / Name
-                        </th>
-                        <th scope="col" class="px-6 py-3">
-                            E-Mail
-                        </th>
-                        <th scope="col" class="px-6 py-3">
-                            Telefon
-                        </th>
-                        <th scope="col" class="px-6 py-3">
-                            Status
-                        </th>
-                        <th scope="col" class="px-6 py-3">
-
-                        </th>
-                    </tr>
-                </thead>
-                <tbody class=" border-b" style="height: 62px;">
-                <tr class=" border-b hover:bg-gray-50">
-                    <td class="w-4 p-4">
-                        <div class="flex items-center">
-                            <input id="checkbox-table-search-1" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 ">
-                            <label for="checkbox-table-search-1" class="sr-only">checkbox</label>
-                        </div>
-                    </td>
-                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
-                        1001
-                    </th>
-                    <td class="px-6 py-4 font-medium text-gray-900">
-                        Marvin Mergili
-                    </td>
-                    <td class="px-6 py-4">
-                        iolemcr2@gmiaol.com
-                    </td>
-                    <td class="px-6 py-4">
-                        +49 0151 2421586
-                    </td>
-                    <td class="px-6 py-4 flex items-center">
-                        <span class="rounded-md border bg-gray-100 p-1">Lead</span>
-                    </td>
-                    <td>
-                        <a href="#" class="text-blue-700 font-semibold">Edit</a>
-                    </td>
-                </tr>
-                <tr class="bg-white border-b hover:bg-gray-50">
-                    <td class="w-4 p-4">
-                        <div class="flex items-center">
-                            <input id="checkbox-table-search-1" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2">
-                            <label for="checkbox-table-search-1" class="sr-only">checkbox</label>
-                        </div>
-                    </td>
-                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
-                        1002
-                    </th>
-                    <td class="px-6 py-4 font-medium text-gray-900">
-                        Omtec Vertriebs GmbH
-                    </td>
-                    <td class="px-6 py-4">
-                        omtec@mail.de
-                    </td>
-                    <td class="px-6 py-4">
-                        +49 0151 2421586
-                    </td>
-                    <td class="px-6 py-4 flex items-center">
-                        <span class="rounded-md border bg-gray-100 p-1">Kunde</span>
-                    </td>
-                    <td>
-                        <a href="#" class="text-blue-700 font-semibold">Edit</a>
-                    </td>
-                </tr>
-                <tr class="bg-white border-b hover:bg-gray-50">
-                    <td class="w-4 p-4">
-                        <div class="flex items-center">
-                            <input id="checkbox-table-search-1" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500focus:ring-2">
-                            <label for="checkbox-table-search-1" class="sr-only">checkbox</label>
-                        </div>
-                    </td>
-                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-                        1003
-                    </th>
-                    <td class="px-6 py-4 font-medium text-gray-900">
-                        Martin Hesse
-                    </td>
-                    <td class="px-6 py-4">
-                        industries@com.de
-                    </td>
-                    <td class="px-6 py-4">
-                        +49 0151 2421586
-                    </td>
-                    <td class="px-6 py-4">
-                        <span class="rounded-md border bg-gray-100 p-1">Kunde</span>
-                    </td>
-                    <td>
-                        <a href="#" class="text-blue-700 font-semibold">Edit</a>
-                    </td>
-                </tr>
-                <tr class="bg-white border-b hover:bg-gray-50">
-                    <td class="w-4 p-4">
-                        <div class="flex items-center">
-                            <input id="checkbox-table-search-1" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500focus:ring-2 ">
-                            <label for="checkbox-table-search-1" class="sr-only">checkbox</label>
-                        </div>
-                    </td>
-                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-                        1003
-                    </th>
-                    <td class="px-6 py-4 font-medium text-gray-900">
-                        Martin Hesse
-                    </td>
-                    <td class="px-6 py-4">
-                        industries@com.de
-                    </td>
-                    <td class="px-6 py-4">
-                        +49 0151 2421586
-                    </td>
-                    <td class="px-6 py-4">
-                        <span class="rounded-md border bg-gray-100 p-1">Kunde</span>
-                    </td>
-                    <td>
-                        <a href="#" class="text-blue-700 font-semibold">Edit</a>
-                    </td>
-                </tr>
-                <tr class="bg-white border-b hover:bg-gray-50">
-                    <td class="w-4 p-4">
-                        <div class="flex items-center">
-                            <input id="checkbox-table-search-1" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2">
-                            <label for="checkbox-table-search-1" class="sr-only">checkbox</label>
-                        </div>
-                    </td>
-                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
-                        1003
-                    </th>
-                    <td class="px-6 py-4 font-medium text-gray-900">
-                        Martin Hesse
-                    </td>
-                    <td class="px-6 py-4">
-                        industries@com.de
-                    </td>
-                    <td class="px-6 py-4">
-                        +49 0151 2421586
-                    </td>
-                    <td class="px-6 py-4">
-                        <span class="rounded-md border bg-gray-100 p-1">Kunde</span>
-                    </td>
-                    <td>
-                        <a href="#" class="text-blue-700 font-semibold">Edit</a>
-                    </td>
-                </tr>
-                <tr class="bg-white border-b hover:bg-gray-50">
-                    <td class="w-4 p-4">
-                        <div class="flex items-center">
-                            <input id="checkbox-table-search-1" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2">
-                            <label for="checkbox-table-search-1" class="sr-only">checkbox</label>
-                        </div>
-                    </td>
-                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
-                        1001
-                    </th>
-                    <td class="px-6 py-4 font-medium text-gray-900">
-                        Marvin Mergili
-                    </td>
-                    <td class="px-6 py-4">
-                        iolemcr2@gmiaol.com
-                    </td>
-                    <td class="px-6 py-4">
-                        +49 0151 2421586
-                    </td>
-                    <td class="px-6 py-4 flex items-center">
-                        <span class="rounded-md border bg-gray-100 p-1">Lead</span>
-                    </td>
-                    <td>
-                        <a href="#" class="text-blue-700 font-semibold">Edit</a>
-                    </td>
-                </tr>
-                <tr style="height: 62px">
-                    <td class="w-4 p-4">
-
-                    </td>
-                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
-
-                    </th>
-                    <td class="px-3 py-4">
-                        <input
-                                type="text"
-                                id="input-group-1"
-                                class="bg-gray-50 p-1 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block" placeholder="Name">
-                    </td>
-                    <td class="px-3 py-4">
-                        <input
-                                type="text"
-                                id="input-group-1"
-                                class="bg-gray-50 p-1 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block"
-                                placeholder="E-Mail">
-                    </td>
-                    <td class="px-3 py-4">
-                        <input
-                                type="text"
-                                id="input-group-1"
-                                class="bg-gray-50 p-1 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block "
-                                placeholder="Telefon">
-                    </td>
-                    <td class="px-6 py-4 flex items-center">
-
-                    </td>
-                    <td>
-                        <a href="#" class="text-blue-700 font-semibold">Neu</a>
-
-                    </td>
-                </tr>
-                </tbody>
-            </table>
-            <nav class="flex items-center justify-between pt-4 m-2" aria-label="Table navigation">
-                <span class="text-sm font-normal text-gray-500 dark:text-gray-400">Showing <span class="font-semibold text-gray-900">1-6</span> of <span class="font-semibold text-gray-900">1000</span></span>
-                <ul class="inline-flex items-center -space-x-px">
-                    <li>
-                        <a href="#" class="block px-3 py-2 ml-0 leading-tight text-gray-500 bg-white border border-gray-300 rounded-l-lg hover:bg-gray-100 hover:text-gray-700">
-                            <span class="sr-only">Previous</span>
-                            <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="px-3 py-2 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700">1</a>
-                    </li>
-                    <li>
-                        <a href="#" class="px-3 py-2 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700">2</a>
-                    </li>
-                    <li>
-                        <a href="#" aria-current="page" class="z-10 px-3 py-2 leading-tight text-blue-600 border border-blue-300 bg-blue-50 hover:bg-blue-100 hover:text-blue-700 ">3</a>
-                    </li>
-                    <li>
-                        <a href="#" class="px-3 py-2 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700">...</a>
-                    </li>
-                    <li>
-                        <a href="#" class="px-3 py-2 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700">100</a>
-                    </li>
-                    <li>
-                        <a href="#" class="block px-3 py-2 leading-tight text-gray-500 bg-white border border-gray-300 rounded-r-lg hover:bg-gray-100 hover:text-gray-700">
-                            <span class="sr-only">Next</span>
-                            <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-
-    </div>
-</div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.js"></script>
+    <script>
+        
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.js"></script>
 </body>
 </html>
