@@ -5,6 +5,9 @@
     <title>Title</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital@0;1&family=Josefin+Sans&family=Nabla&family=Roboto+Flex&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
@@ -25,23 +28,89 @@
         }
 
         .glass {
-        /* From https://css.glass */
-        background: rgba(255, 255, 255, 0.15);
+            /* From https://css.glass */
+            background: rgba(255, 255, 255, 0.75);
+            border-radius: 16px;
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+        }
+
+        .glass-dark {
+            /* From https://css.glass */
+        background: rgba(0, 0, 0, 0.4);
         border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
         backdrop-filter: blur(5px);
         -webkit-backdrop-filter: blur(5px);
         }
+
+        .font-1 {
+            font-family: 'Courier Prime', monospace;
+        }
+
+        .font-2 {
+            font-family: 'Josefin Sans', sans-serif;
+        }
+
+        .font-3{
+            font-family: 'Nabla', cursive;
+        }
+
+        .font-4 {
+            font-family: 'Roboto Flex', sans-serif;
+        }
+
+        .img{
+   width:100px;
+   height:100px;
+
+/*Scale down will take the necessary specified space that is 100px x 100px without stretching the image*/
+    object-fit:scale-down;
+
+}
+        ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: red;
+  opacity: 1; /* Firefox */
+}
+       
     </style>
 </head>
 <body class="bg-gradient-to-tr from-[#FAAC2F] to-[#F606]">
     <div class="flex justify-center w-full h-screen">
-        <div class="mt-auto mb-auto h-20 p-4 glass">
-            <h1 class="text-2xl text-gray-200">
+        <div class="mt-auto mb-auto h-20 glass-dark">
+            <div class="p-2 mb-3">
+                 <h1 class="text-3xl text-white text-center font-3">
              Marvin Mergili
             </h1>
-            <p class="ml-2 text-gray-200">I know how to do stuff.</p>
+            <p class="text-gray-200">I know how to do things.</p>
+            </div>
+            <div class="flex justify-center mt-0.5 p-0 space-x-2">
+               <a class="" href="https://github.com/Mervus">
+                    <img class="m-0 w-10" src="./icons/github-mark-white.png"></img>
+                </a> 
+            </div>
+           
         </div>
     </div>
+    
+    <div class="flex flex-col justify-center w-full text-center">
+        <h2 class="text-2xl text-white font-1">I've worked with</h2>
+        <div class=" mb-10 flex justify-center">
+            <div class="glass-dark flex flex-row p-4 space-x-4">
+                <a href="https://laravel.com/" class="items-center">
+                    <img class="w-24" src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg">
+                </a>
+                <a href="https://react.dev/">
+                    <img class="w-24" src="https://cdn.worldvectorlogo.com/logos/laravel-2.svg" alt="" srcset="">
+                </a>
+                <a href=""><img src="https://vectorlogo.zone/logos/jquery/jquery-vertical.svg" alt=""></a>
+            </div>
+           
+        </div>
+    </div>
+    <script>
+        
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.js"></script>
 </body>
 </html>
